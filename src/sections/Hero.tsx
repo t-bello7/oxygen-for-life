@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image";
-import { FC, useEffect, useRef } from "react";
+import { FC } from "react";
 import { motion } from "motion/react";
 import { Button } from "@/components";
 import {

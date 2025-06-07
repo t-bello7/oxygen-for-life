@@ -1,8 +1,7 @@
 "use client"
 import { FC, useState } from "react";
 import Image from "next/image";
-import { oflLogo, menuBar, menuClose } from "@/assets/icons"
-import { Button } from "@/components";
+import { oflLogo } from "@/assets/icons"
 import { AnimatePresence, motion } from "motion/react";
 
 /* eslint-disable-next-line @typescript-eslint/no-unused-vars */
@@ -25,10 +24,10 @@ const navItems = [
   },
 ];
 
-const variant = {
-  hidden: {opacity: 0, scale: 0.5},
-  visible: { opacity: 0, scale: 1}
-}
+// const variant = {
+//   hidden: {opacity: 0, scale: 0.5},
+//   visible: { opacity: 0, scale: 1}
+// }
 
 const Header: FC = () => {
   const [openMobileMenu, setOpenMobileMenu ]= useState('false')
@@ -43,8 +42,9 @@ const Header: FC = () => {
                 </div>
                 
                 <ul className="hidden lg:flex items-center">
-                  {navItems.map(({label, href}) => (
-                    <li key={label}> <a href=""> {label}</a></li>
+                  {navItems.map(({label}) => (
+                    <li key={label}> <a 
+                    href="#"> {label}</a></li>
                   ))}
                 </ul>
             </div>
