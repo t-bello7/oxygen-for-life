@@ -1,24 +1,9 @@
 import type { Metadata } from "next";
-import { Archivo, Inter, Signika } from 'next/font/google'
 import "./globals.css";
 
-const inter = Inter({
-  display: 'swap',
-  weight: 'variable',
-  subsets: ['greek'],
-  variable: '--font-inter'
-})
-
-const signika = Signika({
-  display: 'swap',
-  subsets: ['latin'],
-  weight: 'variable',
-  variable: '--font-signika'
-})
-
 export const metadata: Metadata = {
-  title: "Jitter A fast and simple motion design tool on the web",
-  description: "jitter.video",
+  title: "OxygenForLife Ghana | Affordable Medical Oxygen in Ghana | Oxygen For Life NGO Saving Lives",
+  description: "Oxygen For Life Ghana is a non-profit providing affordable medical oxygen to hospitals and communities across Ghana. We improve health outcomes by ensuring reliable oxygen access, training healthcare workers, and advocating for better healthcare infrastructure. Support our mission to save lives today",
 };
 
 export default function RootLayout({
@@ -28,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${signika.variable} antialiased bg-white text-black font-inter`}>{children}</body>
+      <body className={` antialiased bg-white text-black`}>{children}</body>
     </html>
   );
 }

@@ -14,3 +14,28 @@
 .word {
     @apply translate-y-full
 }
+
+@font-face {
+    font-family: 'MaximaNouva-Bold';
+    src: url('../assets/fonts/MaximaNouva-Bold.ttf');
+}
+@font-face {
+    font-family: 'MaximaNouva-Thin';
+    src: url('../assets/fonts/MaximaNouva-Thin.ttf')
+}
+@font-face {
+    font-family: 'MaximaNouva-Bold';
+    src: url('../assets/fonts/MaximaNouva-Bold.ttf')
+}
+@font-face {
+    font-family: 'MaximaNouva-ExtraBold';
+    src: url('../assets/fonts/MaximaNouva-ExtraBold.ttf')
+}
+@font-face {
+    font-family: 'MaximaNouva-SemiBold';
+    src: url('../assets/fonts/MaximaNouva-SemiBold.ttf')
+}
+@font-face {
+    font-family: 'MaximaNouva';
+    src: url('../assets/fonts/MaximaNouva-Regular.ttf')
+}

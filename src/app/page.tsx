@@ -10,17 +10,9 @@ export default function Home() {
   return <>
     <Header />
     <Hero />
-    {/* logo bar */}
-    <Intro />
     <Projects />
-
-    {/* LearningCurve */}
-  {/* Features */}
+    <Intro />
     <Testimonials />
-
-    {/* Team Features */}
-
-    {/* Feature side scroll */}
     <Footer />  
   </>
 }

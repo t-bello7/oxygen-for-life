@@ -14,8 +14,11 @@ const config: Config = {
         },
         extend: {
             fontFamily: {
-                inter: ['var(--font-inter)', 'Inter', 'sans-serif'],
-                signika: ['var(--font-signika)', 'Signika', 'sans-serif']
+                maximaNouva: ['MaximaNouva', 'sans-serif'],
+                maximaNouvaBold: ['MaximaNouvaBold', 'sans-serif'],
+                maximaNouvaSemiBold: ['MaximaNouvaSemiBold', 'sans-serif'],
+                maximaNouvaExtraBold: ['MaximaNouvaExtraBold', 'sans-serif'],
+                maximaNouvaThin: ['MaximaNouvaThin', 'sans-serif']
             },
             container: {
                 center: true,
@@ -29,10 +32,11 @@ const config: Config = {
                 gray: {
                     DEFAULT: '#8E8E8E',
                     1: '#BFBFBF',
-                    2: '#F6F6F6'
+                    2: '#F6F6F6',
+                    3: '#f2f1f3'
                 },
                 primary: {
-                    DEFAULT: '#A2F71D'
+                    DEFAULT: '#00BCD4'
                 },
                 secondary: {
                     DEFAULT: '#EED741'
