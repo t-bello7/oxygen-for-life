@@ -31,7 +31,7 @@ const Header: FC = () => {
   console.log(openMobileMenu)
   return (
     <header>
-      <div className="container max-w-[20rem] md:max-w-[18rem] lg:max-w-[80%]">
+      <div className="container max-w-[20rem] md:max-w-[80%] lg:max-w-[80%]">
         <div className="py-7"> 
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-2">
