@@ -4,19 +4,45 @@ import { FC } from "react";
 import { motion } from "motion/react";
 import { Button } from "@/components";
 import {
+  giveBlood,
+  favorite,
+  buildingSix,
+  giveBloodOne
+} from "@/assets/icons";
+import {
   ghanaLogo,
-  whoLogo
+  whoLogo,
 } from "@/assets/images"
 
 const logos = [ghanaLogo, whoLogo]; 
+const info = [
+  {
+    id: "fwrfr",
+    title: "Life Saving Imapct",
+    icon: favorite,
+    text: "5000+ lives impacted through oxygen programs"
+  },
+  {
+    id: "fwrffw",
+    title: "Healthcare Access",
+    icon: buildingSix,
+    text: "Prioritizing rural and underserved communities"
+  },
+  {
+    id: "gergte",
+    title: "Community Focus",
+    icon: giveBloodOne,
+    text: "Prioitizing rural and underserved communities"
+  }
+]
 
 const Hero: FC = () => {
   return(
-  <section>
-    <div className="grid sticky top-0 md:grid-cols-12 md:h-screen items-center md:items-stretch space-y-8 max-w-[80%] container"
+  <section className="space-y-24">
+    <div className="grid top-0 md:grid-cols-12 md:h-screen justify-items-center md:items-stretch space-y-8 max-w-[88%] container"
     >
       <motion.span 
-      className="font-maximaNouvaSemiBold text-xs w-fit py-2 px-1 text-center bg-gray-3"
+      className="block font-maximaNouvaSemiBold text-xs w-fit py-2 px-1 text-center bg-blue-1"
       initial={{
         opacity: 0,
         scale: 0.4
@@ -28,22 +54,24 @@ const Hero: FC = () => {
         transition: { type: "spring", duration: 0.3, bounce: 0.2 },
       }}
       >
-        <span className="font-maximaNouvaBold"> Expanding Oxygen Access, </span>
-        <span className="text-primary">
-          Saving Young Lives
+        <span className="text-blue">
+          Saving Lives in Ghana
         </span>
       </motion.span>
       <h2 className=" text-center font-extrabold text-4xl">
-        Supplying Oxygen <br>
-        </br> to Communities in Ghana
+        Ensuring Access to <br>
+        </br><span className="text-primary"> Medical Oxygen </span> in Ghana
       </h2>
-      <Button variant="primary">
-        Quick Donate
-      </Button>
+    
       <span className="text-xs text-center">
       Over 70% of patients in Ghana lack access to the medical oxygen they need in critical moments.
+      Join us in our mission to improve health outcomes across 
+      Ghana.
       </span>
-      <motion.ul
+      <Button variant="primary" iconBefore={<Image alt="give-Blood" src={giveBlood}/>}>
+        Quick Donate
+      </Button>
+      {/* <motion.ul
         className="flex items-center overflow-hidden"
         animate={{ x: ['0%', '-100%'] }}
         transition={{
@@ -57,8 +85,31 @@ const Hero: FC = () => {
             <Image src={logo} alt={`logo-${index}`} fill className="object-contain" />
           </li>
         ))}
-      </motion.ul>
-    </div> 
+      </motion.ul> */}
+    </div>
+
+      <div 
+      //  animate={{ x: ['0%', '-100%'] }}
+        // transition={{
+        //   repeat: Infinity,
+        //   duration: 5, // duration should be a number, not a string
+        //   ease: [0.25, 0.46, 0.45, 0.94], // ease should be a numeric array, not a string
+        // }}
+      className="f ">
+          {
+            info.map(({icon, text, id, title}) => (
+              <div key={id} className="rounded-xl bg-white w-[25ch] h-[30vh] p-2 grid items-start shadow-2xl">
+                <Image src={icon} alt={title} />
+                <div> 
+                  <span className=""> {title} </span>
+                  <p>
+                    {text}
+                  </p>
+                </div>
+              </div>
+            ))
+          }
+      </div>
   </section>
 )};
 
