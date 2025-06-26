@@ -10,8 +10,6 @@ import {
   giveBloodOne
 } from "@/assets/icons";
 import {
-  ghanaLogo,
-  whoLogo,
   BannerImg
 } from "@/assets/images"
 
