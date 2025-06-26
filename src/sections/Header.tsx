@@ -9,19 +9,19 @@ import { Button } from "@/components";
 /* eslint-disable-next-line @typescript-eslint/no-unused-vars */
 const navItems = [
   {
-    label: "Products",
+    label: "About us",
     href: "#intro",
   },
   {
-    label: "Customers",
+    label: "Our Vision",
     href: "#projects",
   },
   {
-    label: "Templates",
+    label: "Our Values",
     href: "#testimonials",
   },
   {
-    label: "Pricing",
+    label: "Join Us",
     href: "#contact",
   },
 ];
@@ -34,12 +34,12 @@ const Header: FC = () => {
       <div className="container max-w-[20rem] md:max-w-[80%] lg:max-w-[80%]">
         <div className="py-7"> 
           <div className="flex justify-between items-center">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center justify-between gap-2 w-full">
                 <div className="w-[4rem]">
                   <Image className="object-fill" src={oflLogo} alt="jitter logo"  />
                 </div>
                 
-                <ul className="hidden lg:flex items-center">
+                <ul className="hidden md:flex items-center gap-4">
                   {navItems.map(({label}) => (
                     <Link href="" key={label}>{label}</Link>
                   ))}
@@ -52,7 +52,7 @@ const Header: FC = () => {
                     Donate
                 </Button>
               {/* </Link> */}
-              <button className="fixed justify-self-end flex items-center justify-center text-black bg-gray-800 fill-black z-20 "
+              <button className="fixed justify-self-end flex items-center justify-center text-black bg-gray-800 fill-black z-20 md:hidden"
               onClick={() => setOpenMobileMenu(!openMobileMenu)}
               >
                 <AnimatePresence
@@ -66,19 +66,11 @@ const Header: FC = () => {
                   )
                 }
                 </AnimatePresence>
-          
               </button>
             </div>
           </div>
-
-          
         </div>
-       
-        
       </div>
-
-  
-
     </header>
 );
 };
