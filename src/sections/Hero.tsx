@@ -15,7 +15,6 @@ import {
   BannerImg
 } from "@/assets/images"
 
-const logos = [ghanaLogo, whoLogo]; 
 const info = [
   {
     id: "fwrfr",
